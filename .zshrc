@@ -25,8 +25,8 @@ compinit
 
 # %t - time
 # %D - date
-PS1="%B%F{#dd2d4a}%B%n@%m:%f%F{#fdf0d5}%~%f%F{#00FF00}%#%f %f%b"
-RPROMPT="%F{241}%B%t %D%b%f"
+PS1="%B%F{#dd2d4a}%B%n@%m:%f%F{#fdf0d5}%~%f%F{#00FF00}%#%f%b "
+RPROMPT="%F{241}%B%D%t%b%f"
 
 # CURSOR
 # beam
