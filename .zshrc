@@ -11,6 +11,35 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+
+
+
+## PARTS FROM https://github.com/BreadOnPenguins/dots/blob/master/.config/zsh/.zshrc
+## Useful commands:
+## zle -al #show available options
+## set -o #with on/off
+### main opts
+setopt append_history inc_append_history share_history # better history
+### on exit, history appends rather than overwrites; history is appended as soon as cmds executed; history shared across sessions
+setopt autocd # type a dir to cd
+##
+
+
+# autosuggestions
+# requires zsh-autosuggestions
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# LOAD
+autoload -Uz tetriscurses
+
+# ALIASES
+alias -g u="sudo dnf update"
+alias -g c="clear"
+alias -g s="source ~/.zshrc"
+alias -g tetris="tetriscurses"
+alias -g install="sudo dnf install"
+alias -g remove="sudo dnf remove"
+
 # PROMPT
 # %n - username
 # %m - hostname
@@ -31,3 +60,4 @@ RPROMPT="%F{241}%B%D%t%b%f"
 # CURSOR
 # beam
 echo '\e[5 q'
+
