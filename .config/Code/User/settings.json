@@ -1,0 +1,14 @@
+{
+    "python.defaultInterpreterPath": "/bin/python",
+    "workbench.activityBar.location": "top",
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "compact",
+    "workbench.secondarySideBar.defaultVisibility": "visible",
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnPaste": true,
+    "editor.autoIndentOnPaste": true,
+    "editor.codeActions.triggerOnFocusChange": true,
+    "git.enableSmartCommit": true
+}
