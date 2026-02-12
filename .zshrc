@@ -61,3 +61,5 @@ RPROMPT="%F{241}%B%D%t%b%f"
 # beam
 echo '\e[5 q'
 
+# REMOVE FIRST BLANK LINE
+clear
