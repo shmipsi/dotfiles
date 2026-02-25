@@ -1,3 +1,7 @@
+# REQUIREMENTS:
+# zsh-autosuggestions
+
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -39,6 +43,13 @@ alias -g s="source ~/.zshrc"
 alias -g tetris="tetriscurses"
 alias -g install="sudo dnf install"
 alias -g remove="sudo dnf remove"
+alias -g gac="git add . && git commit -m"
+alias -g lsa="ls -A"
+alias -g ll='ls -alF'
+
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
 
 # PROMPT
 # %n - username
