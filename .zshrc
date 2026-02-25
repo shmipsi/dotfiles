@@ -45,7 +45,8 @@ alias -g install="sudo dnf install"
 alias -g remove="sudo dnf remove"
 alias -g gac="git add . && git commit -m"
 alias -g lsa="ls -A"
-alias -g ll='ls -alF'
+alias -g ll="ls -alF"
+alias -g ud="~/files/dotfiles/UpdateDotfiles.sh"
 
 mkcd() {
     mkdir -p "$1" && cd "$1"
