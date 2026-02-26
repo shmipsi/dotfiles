@@ -1,5 +1,6 @@
 # REQUIREMENTS:
 # zsh-autosuggestions
+# lsd (for ls aliases)
 
 
 # Lines configured by zsh-newuser-install
@@ -25,7 +26,8 @@ compinit
 ### main opts
 setopt append_history inc_append_history share_history # better history
 ### on exit, history appends rather than overwrites; history is appended as soon as cmds executed; history shared across sessions
-setopt autocd # type a dir to cd
+##
+# setopt autocd # type a dir to cd
 ##
 
 
@@ -37,19 +39,25 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 autoload -Uz tetriscurses
 
 # ALIASES
-alias -g u="sudo dnf update"
+alias -g dnfu="sudo dnf update"
+alias -g dnfi="sudo dnf install"
+alias -g dnfr="sudo dnf remove"
 alias -g c="clear"
 alias -g s="source ~/.zshrc"
 alias -g tetris="tetriscurses"
-alias -g install="sudo dnf install"
-alias -g remove="sudo dnf remove"
 alias -g gac="git add . && git commit -m"
-alias -g lsa="ls -A"
-alias -g ll="ls -alF"
+alias -g ls="lsd"
+alias -g lsa="lsd -A"
+alias -g ll="lsd -alF"
+alias -g lt="lsd --tree"
 alias -g ud="~/files/dotfiles/UpdateDotfiles.sh"
 
 mkcd() {
     mkdir -p "$1" && cd "$1"
+}
+
+cdl() {
+    cd "$1" ; ls
 }
 
 # PROMPT
@@ -75,3 +83,7 @@ echo '\e[5 q'
 
 # REMOVE FIRST BLANK LINE
 clear
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
