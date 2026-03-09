@@ -1,6 +1,5 @@
 # REQUIREMENTS:
 # zsh-autosuggestions
-# lsd (for ls aliases)
 
 
 # Lines configured by zsh-newuser-install
@@ -39,24 +38,18 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 autoload -Uz tetriscurses
 
 # ALIASES
-alias -g dnfu="sudo dnf update"
-alias -g dnfi="sudo dnf install"
-alias -g dnfr="sudo dnf remove"
 alias -g c="clear"
 alias -g s="source ~/.zshrc"
 alias -g tetris="tetriscurses"
-alias -g gac="git add . && git commit -m"
-alias -g ls="lsd"
-alias -g lsa="lsd -A"
-alias -g ll="lsd -alF"
-alias -g lt="lsd --tree"
+alias -g gitiac="git init && git add . && git commit -m"
 alias -g ud="~/files/dotfiles/UpdateDotfiles.sh"
+alias -g wordle="python3 ~/files/projects/wordle/wordle.py"
 
 mkcd() {
     mkdir -p "$1" && cd "$1"
 }
 
-cdl() {
+cdls() {
     cd "$1" ; ls
 }
 
